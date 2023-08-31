@@ -36,7 +36,7 @@ const index = ({ isTopOfpage, selectedPage, setSelectedPage }: Props) => {
                                         setSelectedPage={setSelectedPage}
                                     />
                                     <Link
-                                        page="Benifits"
+                                        page="Benefits"
                                         selectedPage={selectedPage}
                                         setSelectedPage={setSelectedPage}
                                     />
@@ -82,7 +82,7 @@ const index = ({ isTopOfpage, selectedPage, setSelectedPage }: Props) => {
                     </div>
                     {/* MENU ITEMS */}
                     <div className={`ml-[33%] flex flex-col gap-10 text-2xl `}>
-                        {["Home", "Benifits", "Our classes", "Contact us"].map(
+                        {["Home", "Benefits", "Our classes", "Contact us"].map(
                             (item, index) => (
                                 <Link
                                     key={index}
