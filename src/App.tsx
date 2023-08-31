@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/scenes/navbar";
-import { SelectedPage } from "./shared/types";
+import Home from "@/scenes/home";
+import { SelectedPage } from "@/shared/types";
 
 function App() {
     const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -10,7 +11,7 @@ function App() {
     const [isTopOfpage, setIsTopOfPage] = useState<boolean>(true);
     useEffect(() => {
         const handleScroll = () => {
-            if (window.screenY === 0) {
+            if (window.scrollY === 0) {
                 setIsTopOfPage(true);
                 setSelectedPage(SelectedPage.Home);
             } else {
@@ -29,6 +30,7 @@ function App() {
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
             />
+            <Home setSelectedPage={setSelectedPage} />
         </div>
     );
 }
